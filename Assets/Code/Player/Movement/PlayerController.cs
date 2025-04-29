@@ -39,7 +39,7 @@ public class PlayerController : PlayerManager
             movementDirection.Normalize();
             movementDirection.y = 0f;
 
-            if (playerInputManager.isSprinting)
+            if (playerInputManager.isSprinting && !playerInputManager.isJumping)
             {
                 movementDirection *= sprintSpeed;
             }
